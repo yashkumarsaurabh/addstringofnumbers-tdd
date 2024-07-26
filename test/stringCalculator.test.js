@@ -17,4 +17,8 @@ describe('stringCalculator', () => {
   it('should handle new lines between numbers', () => {
     expect(stringCalculator.add("1\n2,3")).to.equal(6);
   });
+
+  it('should support different delimiters', () => {
+    expect(stringCalculator.add("//;\n1;2")).to.equal(3);
+  });
 });
