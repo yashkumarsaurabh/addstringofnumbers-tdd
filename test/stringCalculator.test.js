@@ -13,4 +13,8 @@ describe('stringCalculator', () => {
   it('should return 6 for "1,5"', () => {
     expect(stringCalculator.add("1,5")).to.equal(6);
   });
+
+  it('should handle new lines between numbers', () => {
+    expect(stringCalculator.add("1\n2,3")).to.equal(6);
+  });
 });
